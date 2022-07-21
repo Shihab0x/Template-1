@@ -1,0 +1,757 @@
+html {
+  text-transform: capitalize;
+  $b: #181a1c;
+  $w: #fff;
+  $y: #fece1a;
+  $l: #747c89;
+  button {
+    text-transform: inherit;
+  }
+  .navbar {
+    background-color: $b;
+    color: $w;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    .navbar-brand {
+      color: $w;
+    }
+    .navbar-brand:hover {
+      color: $w;
+    }
+    .navbar-nav {
+      margin: auto;
+      .nav-item {
+        .nav-link {
+          color: $w;
+          padding: 10px;
+          border: 1px solid transparent;
+        }
+        .nav-link.active,
+        .nav-link:hover {
+          border-color: $y;
+        }
+      }
+    }
+  }
+  .carousel {
+    .cover {
+      width: covor;
+      height: 250px;
+      background-color: $y;
+      .text {
+        padding: 20px;
+        .header {
+          font: bold italic;
+          font-family: "Times New Roman", Times, serif;
+          text-transform: capitalize;
+        }
+        .lorem {
+          color: $w;
+        }
+        button {
+          background-color: transparent;
+          padding: 10px 20px;
+          text-transform: capitalize;
+        }
+        button:hover {
+          background-color: $b;
+          color: $w;
+          z-index: 10;
+        }
+      }
+      .poster {
+        margin: auto;
+        height: fit-content;
+      }
+    }
+  }
+  .primary-section {
+    background-color: $b;
+    padding: 50px;
+    .header {
+      font-weight: bold;
+      color: $w;
+    }
+    .lead {
+      color: $y;
+    }
+    .separator {
+      color: $w;
+      height: 2px;
+    }
+    .box {
+      .circle {
+        width: 150px;
+        height: 150px;
+        border: 2px solid $w;
+        border-radius: 50%;
+        transition: transform 500ms ease;
+        margin-bottom: 10px;
+      }
+      .circle:hover {
+        transform: scale(1.1, 1.1);
+      }
+      .title {
+        color: $y;
+      }
+      .lead {
+        color: $w;
+        text-transform: capitalize;
+        text-align: center;
+      }
+    }
+  }
+  .portfolio {
+    background-color: $y;
+    padding: 30px;
+    hr {
+      height: 2px;
+    }
+    .box {
+      .seletion {
+        list-style-type: none;
+        width: fit-content;
+        .item {
+          display: inline-block;
+          @media (max-width: 700px) {
+            width: 40%;
+            padding-bottom: 20px;
+            text-align: left;
+          }
+          .btn,
+          .btn:focus {
+            border: 1px solid $b;
+            border-radius: 0;
+            padding: 5px 20px;
+            text-transform: inherit;
+            box-shadow: none;
+          }
+          .active {
+            color: $w;
+            background-color: $b;
+          }
+        }
+      }
+      .pictures {
+        justify-content: space-between;
+        .picture {
+          background-color: $b;
+          padding: 0;
+          position: relative;
+          overflow: hidden;
+          width: 32%;
+          margin-bottom: 20px;
+          @media (max-width: 500px) {
+            width: 90%;
+            margin: 10px auto;
+          }
+          .photo {
+            width: 100%;
+          }
+          .title {
+            color: $y;
+            margin-top: 20px;
+          }
+          .desc {
+            color: $w;
+          }
+          .cover {
+            position: absolute;
+            bottom: 95px;
+            width: 100%;
+            height: 10px;
+            transform-origin: bottom;
+            transition: all 300ms linear;
+          }
+        }
+        .picture:hover .cover {
+          transform: scale(1, 24);
+          background-color: rgba($color: $b, $alpha: 0.8);
+        }
+        .picture::after {
+          content: "\2b";
+          position: absolute;
+          top: -10;
+          right: 180px;
+          color: $w;
+          font-size: 3rem;
+          font-weight: bold;
+          transition: all 300ms linear;
+        }
+        .picture:hover::after {
+          top: 0;
+          transform: translateY(100px);
+        }
+      }
+    }
+  }
+  .about {
+    padding: 40px 0;
+    background-color: $b;
+    .header {
+      color: $w;
+      font-weight: 700;
+    }
+    .lead,
+    hr {
+      color: $y;
+    }
+    .box {
+      margin: 0;
+      justify-content: space-between;
+      .item {
+        width: 32%;
+        padding: 5px;
+        background-color: $b;
+        border: 1px solid $w;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        @media (max-width: 700px) {
+          width: 90%;
+          margin: 10px auto;
+        }
+        .photo {
+          width: 100%;
+        }
+        .subtitle {
+          color: $y;
+          margin-top: 20px;
+        }
+        .fa-brands {
+          color: $y;
+          font-size: 2rem;
+          margin: 7px;
+          border-radius: 50%;
+          opacity: 0.99;
+          transform: rotateZ(360deg);
+        }
+        .cover {
+          position: absolute;
+          width: 100%;
+          height: 0;
+          bottom: 0;
+          background-color: rgba($color: $y, $alpha: 0.8);
+          transform-origin: bottom;
+          transition: all 500ms ease;
+          margin-left: -5px;
+          .title {
+            position: absolute;
+            margin-top: 60px;
+            right: 30%;
+            color: inherit;
+          }
+          .desc {
+            position: absolute;
+            margin-top: 100px;
+            font-size: 1.1rem;
+            color: inherit;
+          }
+        }
+      }
+      .item:hover .cover {
+        height: 100%;
+      }
+    }
+    .us {
+      margin-top: 25px;
+      font-weight: 500;
+      color: $y;
+    }
+    .lorem {
+      font-size: 1em;
+      color: $w;
+    }
+    .title {
+      color: $y;
+      text-align: left;
+      margin: 10px;
+    }
+    .wraper {
+      justify-content: space-between;
+      .skill-box {
+        text-align: left;
+        width: 48%;
+        margin-top: -10px;
+        @media (max-width: 700px) {
+          width: 90%;
+          margin: 10px auto;
+        }
+        .progress {
+          display: block;
+          margin: 10px;
+          border-radius: 0;
+          width: 100%;
+          height: 40px;
+          background-color: $w;
+          margin-bottom: 30px;
+          .progress-bar {
+            height: 100%;
+            text-align: inherit;
+            padding: 10px;
+            color: $b;
+            font-size: 1rem;
+            background-color: $y;
+          }
+          .cat {
+            width: 0;
+          }
+          .cat0 {
+            width: 75%;
+            transition: all 3s ease;
+          }
+          .cat1 {
+            width: 90%;
+            transition: all 3s ease;
+          }
+          .cat2 {
+            width: 85%;
+            transition: all 3s ease;
+          }
+          .cat3 {
+            width: 53%;
+            transition: all 3s ease;
+          }
+        }
+      }
+      .join {
+        background-color: $w;
+        height: fit-content;
+        padding: 7px;
+        width: 48%;
+        @media (max-width: 700px) {
+          width: 90%;
+          margin: 10px auto;
+        }
+        .title,
+        .desc {
+          text-align: center;
+          color: initial;
+        }
+        .desc {
+          font-size: 1rem;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+        .join {
+          margin-bottom: 6px;
+          background-color: $y;
+          border: none;
+          width: fit-content;
+          padding: 12px 30px;
+        }
+        .join:hover {
+          color: $y;
+          background-color: $b;
+        }
+      }
+    }
+    .last {
+      background-color: $y;
+      padding: 70px;
+      .large {
+        font-size: 1.8rem;
+      }
+      .button {
+        width: fit-content;
+        height: fit-content;
+        padding: 15px 30px;
+        color: $b;
+        background-color: transparent;
+        border-width: 1px;
+        outline: none;
+      }
+      .button:hover {
+        color: $w;
+        background-color: $b;
+      }
+    }
+  }
+  .Clients {
+    .background {
+      padding-top: 70px;
+      background-color: $b;
+      .head {
+        .title {
+          color: $w;
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+        .desc {
+          color: $y;
+        }
+        hr {
+          color: $y;
+          height: 2px;
+        }
+      }
+      .boxes {
+        .box {
+          .msg {
+            background-color: $y;
+            text-align: justify;
+            font-weight: 500;
+            padding: 10px;
+            position: relative;
+          }
+          .msg::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 10px;
+            border: 15px solid $b;
+            border-color: $y transparent transparent;
+          }
+          .wraper {
+            .icon {
+              .photo {
+                width: 50px;
+                height: 50px;
+                text-align: left;
+                margin-top: 10px;
+              }
+            }
+            .data {
+              color: $y;
+              .name {
+                margin: 10px 0 0;
+                font-weight: 600;
+              }
+              .type {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .lorem {
+      color: $w;
+      font-size: 1.2rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin: auto;
+      padding: 40px 0;
+    }
+    .separator {
+      height: 10px;
+      background-color: $y;
+    }
+    .contain {
+      height: 300px;
+      padding: 70px;
+      background-image: linear-gradient(to left, gold, blue, silver);
+      .under-line {
+        width: 100%;
+        height: 1px;
+        background-color: $w;
+        margin: 20px 0;
+      }
+      .title {
+        color: $y;
+      }
+      hr {
+        background-color: $w;
+        margin: 20px 0;
+      }
+      .clients {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        .item {
+          width: 200px;
+          height: 100px;
+          margin-bottom: 30px;
+          .photo {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .price {
+    .up {
+      text-align: center;
+      background-color: $y;
+      padding: 70px 0 50px;
+      .header {
+        font-size: 38.5px;
+      }
+      .desc {
+        margin: 10px 0 30px 0;
+      }
+      .separator {
+        height: 1px;
+        background-color: $b;
+      }
+      .box-content {
+        padding: 70px 0 30px;
+        justify-content: space-between;
+        .box {
+          background-color: $w;
+          border-radius: 15px;
+          padding: 0;
+          width: calc(95% / 3);
+          @media (max-width: 700px) {
+            width: 90%;
+            margin: 10px auto;
+          }
+          .title {
+            padding: 40px 0;
+            font-size: 36px;
+            color: $y;
+            background-color: $b;
+            border-radius: 15px 15px 0 0;
+          }
+          .content {
+            color: $l;
+            .item {
+              display: block;
+              padding: 10px 0;
+              font-size: 1.2em;
+            }
+            hr {
+              height: 2px;
+              background-color: $b;
+              margin: 10px 70px;
+            }
+            .price {
+              margin-top: 15px;
+              font-size: 31px;
+            }
+            .type::after {
+              content: " Setup";
+            }
+            .support::after {
+              content: " Support";
+            }
+            .storage::after {
+              content: " File Storage";
+            }
+            .item::after {
+              font-weight: 400;
+            }
+            .buy {
+              color: $y;
+              background-color: $b;
+              padding: 15px 30px;
+              border: none;
+              margin: 10px 0 20px;
+            }
+            .buy:hover {
+              color: $b;
+              background-color: $y;
+            }
+          }
+        }
+      }
+      .paragraph {
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+      .contact {
+        padding: 15px 30px;
+        background-color: transparent;
+        border: 1px solid $b;
+      }
+      .contact:hover {
+        color: $w;
+        background-color: $b;
+      }
+    }
+    .dawn {
+      padding: 30px;
+      background: url(../img/natural.jpg) no-repeat fixed;
+      width: 100%;
+      .header {
+        color: $y;
+      }
+      .sepaarator {
+        background-color: $w;
+        height: 2px;
+      }
+      .content {
+        padding: 30px 0;
+        justify-content: space-between;
+        .desc {
+          color: $w;
+        }
+        form {
+          width: 54%;
+          @media (max-width: 700px) {
+            width: 100%;
+          }
+          .email {
+            max-width: 400px;
+            height: 20px;
+            padding: 16px;
+            box-sizing: content-box;
+            border-width: 1px;
+            border-radius: 5px;
+            @media (max-width: 700px) {
+              width: 90%;
+              margin: 10px auto;
+            }
+          }
+          .sub {
+            padding: 15px 30px;
+            margin-left: 15px;
+            background-color: $y;
+            border: none;
+            @media (max-width: 700px) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    .one {
+      background-color: $y;
+      padding: 50px 0 30px;
+    }
+    .two {
+      background: url(../img/map.jpg) no-repeat;
+      padding: 20px;
+      @media (max-width: 700px) {
+        padding: 20PX 0;
+      }
+      .msg-box {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px;
+        width: fit-content;
+        border-radius: 5px;
+        background-color: rgba($color: $w, $alpha: 0.9);
+        @media (max-width: 700px) {
+          width: 98%;
+          padding: 0;
+          margin: 0;
+        }
+        .title {
+          color: $l;
+          margin: 25px;
+        }
+        .input {
+          width: 430px;
+          padding: 0;
+          border: 1px solid $l;
+          border-radius: 4px;
+          margin: 10px auto;
+          resize: none;
+          overflow: auto;
+          @media (max-width: 700px) {
+            width: 90%;
+            margin: 10px auto;
+          }
+        }
+        .input:not(textarea) {
+          @media (min-width: 700px) {
+            height: 52px;
+          }
+        }
+        .label {
+          text-align: left;
+          margin-left: 30px;
+          font-weight: 500;
+          display: none;
+        }
+        .send {
+          color: $l;
+          width: fit-content;
+          border: 1px solid $l;
+          padding: 15px 30px;
+          margin: 20px auto 40px;
+        }
+        .send:hover {
+          background-color: $y;
+        }
+      }
+    }
+    .three {
+      background-color: $y;
+      padding: 20px;
+      font-size: 1.5em;
+      .address {
+        color: $w;
+        margin: 10px;
+      }
+      .mail {
+        border: 1px solid $w;
+        width: fit-content;
+        padding: 10px 140px;
+        margin: 10px auto;
+        @media (max-width: 700px) {
+          padding: 10px 20px;
+        }
+      }
+      .number {
+        color: $w;
+        margin-bottom: 40px;
+      }
+      .separator {
+        height: 2px;
+        margin: 25px;
+      }
+      .list {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .item {
+          margin: 10px;
+          @media (max-width: 700px) {
+            flex-basis: 25%;
+          }
+          .link {
+            .fa-brands {
+              color: $y;
+              font-size: 25px;
+              border-radius: 50%;
+              background-color: $w;
+              padding: 10px;
+              width: 50px;
+              height: 50px;
+              line-height: 25px;
+            }
+            .fa-brands:hover {
+              background-color: $b;
+            }
+          }
+        }
+      }
+    }
+  }
+  .foot {
+    width: 100%;
+    padding: 5px;
+    background-color: $b;
+    .rights {
+      color: $w;
+      font-size: 1.2rem;
+      margin: 0;
+      .link {
+        color: $y;
+        text-decoration: none;
+      }
+    }
+  }
+  .arrow-up {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    color: $w;
+    background-color: $y;
+    border: 1px solid $w;
+    border-radius: 5px;
+    line-height: 40px;
+  }
+}
